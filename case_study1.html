@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Case Study 1</title>
+</head>
+<body>
+<h2> Dataset has 6.3 M records with 11 columns</h2>
+<h2> Dataset is cleaned no missing values </h2>
+<h1>Few Visualizations</h1>
+<h2>Count of Transaction for each different types of Transactions </h2>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q12.png">
+<h2>Distributions of valid and Invalid transaction count </h2>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q13.png">
+<h2>Total Amount made in every Transaction Type </h2>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q14.png">
+<h2>Fraud Transaction Type Count </h2>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q15.png">
+<h2>Percentage of Valid and Invalid Transaction </h2>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q16.png">
+<h2>Percentage of Transaction Count each hour </h2>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q17.png">
+<h2> Feature Engineering:</h2></br
+<br><b>Extracted hour of transaction made from step column</b> </br>
+<br><b>Derived column Error Balance Original = Amount -Old Balance original Account + New Balance Original Account valid for Outgoing Transactions </b></br>
+<br><b>Derived column Error Balance Destination = Amount -Old Balance destination Account + New Balance Destination Account valid for Outgoing Transactions </b></br>
+<h2><br>Key observations:</h2></br>
+<br><b> 0.5% of total fraud cases occur when Old And New Balance Original are 0</br></b>
+<br><b>Around 50% of total fraud points are when Old and New Destination is 0 </br></b>
+<h2>Encoding:</h2>
+<h2>Performed Label Encoding for categorical column and perform Normalization on numerical columns </h2>
+<h2> Model building </h2>
+<b><br>1: Random Forest without Hyperparameter Tuning because Hyperparameter Tuning was taking lot of time </br><b>
+<b><br>Random forest Results:</b></br>
+<b><br> AUC: </b></br>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q19.png">
+<b><br> Accuracy: 99.9994 % on test data </br></b>
+<b><br> Top features:</br></b>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q20.png">
+<b><br> Confusion Matrix: </br></b>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q21.png">
+
+<b><br>2: Decision Tree with Hyperparameter Tuning but with less iterations</br><b>
+<b><br>Decision Tree Results:</b></br>
+<b><br> AUC: </b></br>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q22.png">
+<b><br> Accuracy: 99.9992 % on test data </br></b>
+<b><br> Top features:</br></b>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q23.png">
+<b><br> Confusion Matrix: </br></b>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q24.png">
+<h2>Summary</h2>
+<img src="C:/Users/shwer/OneDrive/Desktop/New folder/q25.png">
+<h2>If Time what would I had done: </h2>
+<b><br>Did More research on Feature Engineering create more features </br></b>
+<b><br>If Location was given then would have more interesting </br></b>
+<b><br>Encoding of categorical column Name original and Destination Original was taking too much time so I would have done that if time was more </b></br>
+<br><b>Optimized Models with HyperParameter Tuning and build various more models like XgBoost, LSTM, SVM etc to see which models gives best results</br></b>
+<br><b>Evaluated metrics like Recall or more metrics which is easy for model results intepretability  </br></b>
+</body>
+</html>
